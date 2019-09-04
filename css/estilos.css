@@ -1,0 +1,502 @@
+/*-Resetear estilos-*/
+/*-
+	Selector universal = *
+	Selector de clase = .
+	Selector de id = #
+
+	margin = Espacio entre cajas
+	padding = espacio entre el borde y contenido
+	color = color del texto
+-*/
+/*
+	Colores
+	azul = rgb(0, 142, 214)
+
+*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	outline: 0;
+}
+/*Mis fuentes locales*/
+@font-face{
+	font-family: 'proRegular';
+	src: url('../fonts/sourceSansPro/SourceSansPro-Regular.ttf');
+}
+@font-face{
+	font-family: 'proLight';
+	src: url('../fonts/sourceSansPro/SourceSansPro-Light.ttf');
+}
+@font-face{
+	font-family: 'proSemiBold';
+	src: url('../fonts/sourceSansPro/SourceSansPro-SemiBold.ttf');
+}
+@font-face{
+	font-family: 'proBold';
+	src: url('../fonts/sourceSansPro/SourceSansPro-Bold.ttf');
+}
+a{
+	color: white;
+}
+span{
+	font-family: 'proSemiBold';
+}
+p{
+	font-family: 'proLight';
+}
+button{
+	cursor: pointer;
+}
+body{
+	/* Asignar la fuente al texto */
+	font-family: 'proRegular', sans-serif;
+}
+/*Uso de clases compartidas
+
+	transformasr los textos a mayúsculas
+		text-transform: uppercase; //mayus
+		text-transform: lowercase; //minus
+		text-transform: capitalize; //mayus inicial
+*/
+.mayus{
+	text-transform: uppercase;
+}
+.minus{
+	text-transform: lowercase;
+}
+.cap{
+	text-transform: capitalize;
+}
+.contenedor{
+	width: 80%;
+	margin: 0 auto;/*Centrar cajas*/
+}
+.titulo{
+	font-size: 1.8em;
+	margin: 20px 0 30px;
+}
+/*-- Inicio --*/
+.inicio{
+	/* 
+		La propuedad background sirve para setear el fondo a una caja
+		Los valores que pueden recibir son:
+			background-image: url('ruta');
+			background-color: white;
+			background-repeat: no-repeat;
+			background-repeat: repeat-x;
+			background-repeat: repeat-y;
+			background-position: top center;
+			background-position: 200px center;
+			background-attachment: fixed;
+
+		En todo caso, todos los items mencionados anteriormente
+		se pueden agrupar en la propiedad background como lo
+		muestra la linea 47.
+	 */
+	background: url('../imgs/bgInicio.png') white no-repeat center fixed;
+	background-size: cover;
+	color: white;
+	/*Unidades relativas: %*/
+	/*Unidades absolutas: px*/
+	width: 100%;/*Ancho de la caja*/
+}
+.inicio header{
+	padding: 30px 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between; /*Organizar el contenido en x*/
+	align-items: center; /*Organiza el contenido en y*/
+}
+.logo{
+	display: flex;
+	align-items: center;
+}
+/*Selectores avanzados
+	Tipo hijo
+	el primer hijo
+	.clase:first-child{}
+
+	el último hijo
+	.clase:last-child{}
+
+	especifico
+	.clase:nth-child(2){}
+
+	impares
+	.clase:nth-child(odd){}
+	pares
+	.clase:nth-child(even){}
+*/
+.logo p:last-child{
+	font-size: 0.4em;
+	color: rgba(255, 255, 255, 0.5);
+	margin-left: 5px;
+}
+/*Anidar*/
+.menu a{
+	text-transform: capitalize;
+	margin: 10px;
+}
+/*Selectores avanzados
+	De tipo enlace
+	Cuando el puntero esta encima de la caja
+	.clase:hover{}
+*/
+.menu a:hover{
+	border-bottom: 2px solid rgb(0, 142, 214);
+	padding-bottom: 8px;
+}
+.txtInicio{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+}
+.txtInicio article{
+	flex-basis: 50%;/*Ancho de cajas flexibles*/
+}
+.imgInicio{
+	flex-basis: 40%;/*Ancho de cajas flexibles*/
+}
+.imgInicio img{
+	width: 100%;
+	vertical-align: middle;
+}
+.txtInicio article h5{
+	color: rgb(0, 142, 214);
+	font-size: 1em;
+	letter-spacing: 1px;/*Espaciado entre letras*/
+}
+.txtInicio article h2{
+	margin: 20px 0;
+	font-size: 3em; /*Tamaño de la fuente*/
+	font-family: 'proRegular';
+}
+.txtInicio article p{
+	margin-bottom: 40px;
+	color: rgba(255, 255, 255, 0.5);
+}
+.btnAzul{
+	padding: 15px 25px;
+	color:white;
+	background:rgb(0, 142, 214);
+	border-radius: 3px;
+	margin-right: 20px;
+}
+.btnOscuro{
+	padding: 15px 25px;
+	color: white;
+	background: transparent;
+	border:1px solid white;
+	border-radius: 3px;
+}
+/*-Features-*/
+.mejoras{
+	color: black;
+	text-align: center;
+	padding: 50px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 20%);
+}
+.subtitulo{
+	color: rgb(0, 142, 214);
+	font-family: 'proSemiBold';
+}
+.listaMejoras{
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+}
+.listaMejoras li{
+	flex-basis: 25%;
+	margin: 0 20px;
+}
+.listaMejoras li h2{
+	font-family: 'proLight';
+	margin: 20px 0 10px;
+}
+.listaMejoras li p{
+	color: rgba(0, 0, 0, 50%);
+}
+.iconLucid{
+	font-size: 2em;
+	color: rgb(0, 142, 214);
+	border: 1px solid rgba(0, 0, 0, 20%);
+	padding: 30px;
+	border-radius: 100%;
+}
+.listaMejoras li:first-child i{
+	padding: 30px 26px;
+}
+.listaMejoras li:last-child i{
+	padding: 30px 36px;
+}
+.lineas{
+	display: flex;
+	justify-content: center;
+	flex-flow: row nowrap;
+}
+.lineas div{
+	width: 25px;
+	height: 3px;
+	background: rgb(0, 142, 214);
+	margin: 0 3px;
+}
+/*Dispositivo*/
+.celular{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 0;
+}
+.celular aside{
+	margin: 0 20px;
+	flex-basis: 50%;
+}
+.celular aside .lineas{
+	justify-content: flex-start;
+}
+.txt{
+	margin: 20px 0;
+	color: rgba(0, 0, 0, 50%); 
+}
+.imgCel{
+	width: 80%;
+	margin: 0 auto;
+}
+.imgCel img{
+	width: 100%;
+}
+.listaCelular li{
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+.listaCelular li i{
+	color: rgb(0, 142, 214);
+	margin-right: 10px;
+}
+.celularEdit{
+	background: #ebebeb;
+}
+.celularEdit > section{
+	display: flex;
+	padding: 50px 0;
+	justify-content: space-between;
+	align-items: center;
+}
+.celularEdit aside:first-child{
+	flex-basis: 40%;
+}
+.celularEdit aside:last-child{
+	flex-basis: 60%;
+}
+.celularEdit aside .lineas{
+	justify-content: flex-start;
+}
+.celularEdit aside .imgCel{
+	width: 100%;
+}
+/*Comentarios*/
+.comentarios{
+	padding: 50px 0;
+	background: url('../imgs/preciosBg.png') center no-repeat fixed;
+	background-size: cover;
+	text-align: center;
+	color: white;
+}
+.personas{
+	margin: 50px 0;
+	display: flex;
+	text-align: left;
+}
+.personas li{
+	margin: 0 20px;
+}
+.personas li p{
+	font-style: italic;
+	letter-spacing: 1px;
+}
+.personas li > div{
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+}
+.imgCircular{
+	border-radius: 100%;
+}
+.nombre{
+	margin: 20px;
+}
+.nombre h4{
+	margin-bottom: 10px;
+}
+.puntos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.puntos li{
+	width: 10px;
+	height: 10px;
+	border: 1px solid white;
+	margin: 10px;
+	border-radius: 100%;
+	cursor: pointer;
+}
+.activo{
+	background: white;
+}
+/*Me gusta*/
+.meGusta{
+	background: black;
+	color: white;
+	padding: 40px 0;
+}
+.meGusta .contenedor{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.meGusta p{
+	font-size: 1.6em;
+}
+/*Precios y planes*/
+.preciosYPlanes{
+	text-align: center;
+	padding: 50px 0;
+}
+.listaPrecios{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 50px 0;
+}
+.listaPrecios li{
+	margin: 0 10px;
+	border: 1px solid rgba(0, 0, 0, 15%);
+}
+.listaPrecios li div{
+	border-bottom: 1px solid rgba(0, 0, 0, 15%);
+	padding: 20px 15px;
+}
+.listaPrecios li div:last-child{
+	border-bottom: none;
+}
+.listaPrecios li:nth-child(3) h3{
+	color: rgb(0, 142, 214);
+}
+.precio h2{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.precio h2 p{
+	padding-top: 10px;
+}
+.precio h2 span{
+	font-size: 2em;
+}
+.precioBg{
+	background: rgb(0, 142, 214);
+	color: white;
+}
+.comprar{
+	color: rgb(0, 142, 214);
+	border: 1px solid rgba(0, 0, 0, 15%);
+	border-radius: 3px;
+	padding: 15px 25px;
+	margin-top: 30px;
+	font-family: 'proSemiBold';
+	transition: ease-in-out 0.2s;
+}
+.comprar:hover{
+	color: white;
+	background: rgb(0, 142, 214);
+}
+/*Contacto*/
+.contacto{
+	padding: 50px 0;
+	background: #ebebeb;
+	text-align: center;
+}
+.listaDatos{
+	margin: 40px 0;
+	display: flex;
+	justify-content: center;
+}
+.listaDatos li{
+	flex-basis: 30%;
+}
+.listaDatos li i{
+	color: rgb(0, 142, 214);
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+.formulario{
+	background: black;
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 35px;
+}
+.formulario aside{
+	flex-basis: 45%;
+	margin: 10px;
+}
+.formulario aside:last-child{
+	flex-basis: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.formulario aside div{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.formulario aside div:last-child{
+	margin-bottom: 0px;
+}
+.formulario aside input, .formulario aside textarea{
+	background: black;
+	border: 1px solid gray;
+	padding: 15px;
+	font-size: 1em;
+	color: white;
+	width: 100%;
+	border-radius: 4px;
+}
+.formulario aside textarea{
+	height: 100%;
+}
+.formulario aside .btnEnviar{
+	background: rgb(0, 142, 214);
+	border: 0;
+	cursor: pointer;
+	width: 170px;
+}
+/*Mapa*/
+
+/*Pie de página*/
+.copy{
+	padding: 40px 0;
+	text-align: center;
+	background: black;
+	color: rgba(255, 255, 255, 30%);
+}
+.copy nav{
+	margin-bottom: 20px;
+}
+.copy nav a{
+	color: rgba(255, 255, 255, 30%);
+	font-size: 1.6em;
+	margin: 0 10px;
+}
+.copy nav a:hover{
+	color: rgb(0, 142, 214);
+}

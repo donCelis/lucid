@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cajas flexibles</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		body{
+			font-family: sans-serif;
+		}
+		.padre{
+			margin: 0 auto;
+			width: 80%;
+			height: 100vh;
+			background: rgb(44, 62, 80);
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.hijo{
+			text-align: center;
+			width: 200px;
+			height: 200px;
+			background: rgb(22, 160, 133);
+			color: white;
+			font-size: 3em;
+		}
+	</style>
+</head>
+<body>
+	<section class="padre">
+		<div class="hijo">1</div>
+		<div class="hijo">2</div>
+		<div class="hijo">3</div>
+	</section>
+</body>
+</html>
