@@ -1,0 +1,406 @@
+/*-Resetear estilos-
+
+$base-color: rgb(0, 142, 214)
+
+*
+	margin: 0
+	padding: 0
+	border: 0
+	text-decoration: none
+	list-style: none
+	box-sizing: border-box
+	outline: 0
+
+/*Mis fuentes locales
+@font-face
+	font-family: 'proRegular'
+	src: url('../fonts/sourceSansPro/SourceSansPro-Regular.ttf')
+
+@font-face
+	font-family: 'proLight'
+	src: url('../fonts/sourceSansPro/SourceSansPro-Light.ttf')
+
+@font-face
+	font-family: 'proSemiBold'
+	src: url('../fonts/sourceSansPro/SourceSansPro-SemiBold.ttf')
+
+@font-face
+	font-family: 'proBold'
+	src: url('../fonts/sourceSansPro/SourceSansPro-Bold.ttf')
+a
+	color: white
+
+span
+	font-family: 'proSemiBold'
+
+p
+	font-family: 'proLight'
+
+button
+	cursor: pointer
+	color: white
+
+body
+	font-family: 'proRegular', sans-serif
+
+
+.mayus
+	text-transform: uppercase
+
+.minus
+	text-transform: lowercase
+
+.cap
+	text-transform: capitalize
+
+.contenedor
+	width: 80%
+	margin: 0 auto
+
+.titulo
+	font-size: 1.8em
+	margin: 20px 0 30px
+
+/*-- Inicio --
+.inicio
+	background: url('../img/bgInicio.png') white no-repeat center fixed
+	background-size: cover
+	color: white
+	width: 100%
+	header
+		padding: 30px 0
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		align-items: center
+
+.logo
+	display: flex
+	align-items: center
+	p:last-child
+		font-size: 0.4em
+		color: rgba(255, 255, 255, 0.5)
+		margin-left: 5px
+
+/*Anidar
+.menu 
+	a
+		text-transform: capitalize
+		margin: 10px
+	a:hover
+		border-bottom: 2px solid  $base-color
+		padding-bottom: 8px
+
+.txtInicio
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-top: 20px
+	article
+		flex-basis: 50%
+		h5
+			color:  $base-color
+			font-size: 1em
+			letter-spacing: 1px
+		h2
+			margin: 20px 0
+			font-size: 3em
+			font-family: 'proRegular'
+		p
+			margin-bottom: 40px
+			color: rgba(255, 255, 255, 0.5)
+
+.imgInicio
+	flex-basis: 40%
+	img
+		width: 100%
+		vertical-align: middle
+
+
+.btnAzul
+	padding: 15px 25px
+	color:white
+	background: $base-color
+	border-radius: 3px
+	margin-right: 20px
+
+.btnOscuro
+	padding: 15px 25px
+	color: white
+	background: transparent
+	border: 1px solid white
+	border-radius: 3px
+
+/*-Features
+.mejoras
+	color: black
+	text-align: center
+	padding: 50px 0
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+
+.subtitulo
+	color:  $base-color
+	font-family: 'proSemiBold'
+
+.listaMejoras
+	margin-top: 50px
+	display: flex
+	justify-content: space-between
+	flex-flow: row nowrap
+	li
+		flex-basis: 25%
+		margin: 0 20px
+		h2
+			font-family: 'proLight'
+			margin: 20px 0 10px
+		p
+			color: rgba(0, 0, 0, 0.5)
+
+.iconLucid
+	font-size: 2em
+	color:  $base-color
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	padding: 30px
+	border-radius: 100%
+
+.listaMejoras li:first-child i
+	padding: 30px 26px
+
+.listaMejoras li:last-child i
+	padding: 30px 36px
+
+.lineas
+	display: flex
+	justify-content: center
+	flex-flow: row nowrap
+	div
+		width: 25px
+		height: 3px
+		background:  $base-color
+		margin: 0 3px
+
+/*Dispositivo
+.celular
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 50px 0
+	aside
+		margin: 0 20px
+		flex-basis: 50%
+		.lineas
+			justify-content: flex-start
+
+.txt
+	margin: 20px 0
+	color: rgba(0, 0, 0, 0.5)
+
+.imgCel
+	width: 80%
+	margin: 0 auto
+	img
+		width: 100%
+
+.listaCelular li
+	display: flex
+	align-items: center
+	margin: 10px 0
+
+.listaCelular li i
+	color:  $base-color
+	margin-right: 10px
+
+.celularEdit
+	background: #ebebeb
+	> section
+		display: flex
+		padding: 50px 0
+		justify-content: space-between
+		align-items: center
+	aside:first-child
+		flex-basis: 40%
+	aside:last-child
+		flex-basis: 60%
+
+.celularEdit aside .lineas
+	justify-content: flex-start
+
+.celularEdit aside .imgCel
+	width: 100%
+
+/*Comentarios
+.comentarios
+	padding: 50px 0
+	background: url('../img/preciosBg.png') center no-repeat fixed
+	background-size: cover
+	text-align: center
+	color: white
+
+.personas
+	margin: 50px 0
+	display: flex
+	text-align: left
+	li
+		margin: 0 20px
+		p
+			font-style: italic
+			letter-spacing: 1px
+		> div
+			display: flex
+			align-items: center
+			margin: 20px 0
+
+.imgCircular
+	border-radius: 100%
+
+.nombre
+	margin: 20px
+	h4
+		margin-bottom: 10px
+
+.puntos
+	display: flex
+	justify-content: center
+	align-items: center
+	li
+		width: 10px
+		height: 10px
+		border: 1px solid white
+		margin: 10px
+		border-radius: 100%
+		cursor: pointer
+
+.activo
+	background: white
+
+/*Me gusta
+.meGusta
+	background: black
+	color: white
+	padding: 40px 0
+	.contenedor
+		display: flex
+		justify-content: space-between
+		align-items: center
+	p
+		font-size: 1.6em
+
+/*Precios y planes
+.preciosYPlanes
+	text-align: center
+	padding: 50px 0
+
+.listaPrecios
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 50px 0
+	li
+		margin: 0 10px
+		border: 1px solid rgba(0, 0, 0, 0.15)
+		div
+			border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+			padding: 20px 15px
+		div:last-child
+			border-bottom: none
+	li:nth-child(3) h3
+		color:  $base-color
+
+.precio h2
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	p
+		padding-top: 10px
+	span
+		font-size: 2em
+
+.precioBg
+	background:  $base-color
+	color: white
+
+.comprar
+	color:  $base-color
+	border: 1px solid rgba(0, 0, 0, 0.15)
+	border-radius: 3px
+	padding: 15px 25px
+	margin-top: 30px
+	font-family: 'proSemiBold'
+	transition: ease-in-out 0.2s
+
+.comprar:hover
+	color: white
+	background:  $base-color
+
+/*Contacto
+.contacto
+	padding: 50px 0
+	background: #ebebeb
+	text-align: center
+
+.listaDatos
+	margin: 40px 0
+	display: flex
+	justify-content: center
+	li
+		flex-basis: 30%
+		i
+			color:  $base-color
+			font-size: 2em
+			margin-bottom: 20px
+
+.formulario
+	background: black
+	width: 70%
+	margin: 0 auto
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	padding: 35px
+	aside
+		flex-basis: 45%
+		margin: 10px
+	aside:last-child
+		flex-basis: 100%
+		display: flex
+		justify-content: flex-end
+
+.formulario aside div
+	width: 100%
+	margin-bottom: 20px
+
+.formulario aside div:last-child
+	margin-bottom: 0px
+
+.formulario aside input, .formulario aside textarea
+	background: black
+	border: 1px solid gray
+	padding: 15px
+	font-size: 1em
+	color: white
+	width: 100%
+	border-radius: 4px
+
+.formulario aside textarea
+	height: 100%
+
+.formulario aside .btnEnviar
+	background:  $base-color
+	border: 0
+	cursor: pointer
+	width: 170px
+
+/*Pie de página
+.copy
+	padding: 40px 0
+	text-align: center
+	background: black
+	color: rgba(255, 255, 255, 0.3)
+	nav
+		margin-bottom: 20px
+		a
+			color: rgba(255, 255, 255, 0.3)
+			font-size: 1.6em
+			margin: 0 10px
+		a:hover
+			color:  $base-color
